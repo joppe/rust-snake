@@ -46,6 +46,7 @@ impl Frame {
     pub fn random_position(&self) -> Position {
         let mut rng = rand::thread_rng();
 
+        // Use an offset of 2 because of the walls
         Position {
             x: rng.gen_range(2..(self.size.width - 2)),
             y: rng.gen_range(2..(self.size.height - 2)),

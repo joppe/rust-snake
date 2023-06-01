@@ -17,6 +17,7 @@ impl Renderer {
 
     pub fn render(&mut self, stdout: &mut io::Stdout, frame: Frame) {
         for (i, cell) in frame.cells.iter().enumerate() {
+            // Only update cells that have changed
             if *cell != self.last_frame.cells[i] {
                 let position = frame.index_to_position(i as i32);
 

@@ -16,12 +16,6 @@ use snake::{
     position::Position, renderer::Renderer, size::Size, snake::Snake, vector::Vector,
 };
 
-/**
- * https://github.com/baurst/rs_snake/blob/master/src/snake.rs
- * https://github.com/CleanCut/rusty_time/blob/main/src/lib.rs
- * https://github.com/CleanCut/invaders/blob/main/src/player.rs
- */
-
 fn main() {
     let size = Size {
         width: 40,
