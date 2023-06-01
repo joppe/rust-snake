@@ -33,11 +33,7 @@ impl Snake {
     }
 
     pub fn collision(&self, position: Position) -> bool {
-        if self
-            .segments
-            .iter()
-            .any(|&segment| segment.x == position.x && segment.y == position.y)
-        {
+        if self.segments.iter().any(|&segment| segment == position) {
             return true;
         }
 
